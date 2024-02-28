@@ -3,13 +3,12 @@ package com.eastrabbit.identity_number.validator;
 public class TaiwanIdentityValidator {
 
     public static boolean valid(final String taiwanIdentityNumber) {
-        final String upperCaseTaiwanIdentityNumber = taiwanIdentityNumber.toUpperCase();
         //確認格式正確
-        if (!IdentityNumberRegexCheckUtil.isLegal(upperCaseTaiwanIdentityNumber)) {
+        if (!IdentityNumberRegexCheckUtil.isLegal(taiwanIdentityNumber)) {
             return false;
         }
         //將身份證字號轉為char[]
-        char[] identityNumberChars = upperCaseTaiwanIdentityNumber.toCharArray();
+        char[] identityNumberChars = taiwanIdentityNumber.toCharArray();
         //取得身份證字號最後一位數
         int lastIdentityNumber = Character.getNumericValue(identityNumberChars[9]);
         int checkNumber;

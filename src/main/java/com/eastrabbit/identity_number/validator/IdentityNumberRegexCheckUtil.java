@@ -8,7 +8,6 @@ class IdentityNumberRegexCheckUtil {
     private static final Pattern pattern = Pattern.compile(regex);
 
     static boolean isLegal(String taiwanIdentityNumber) {
-        Matcher matcher = pattern.matcher(taiwanIdentityNumber);
-        return matcher.matches();
+        return pattern.matcher(taiwanIdentityNumber).matches();
     }
 }

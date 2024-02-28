@@ -1,98 +1,28 @@
 package com.eastrabbit;
 
 import com.eastrabbit.identity_number.validator.TaiwanIdentityValidator;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class TaiwanIdentityValidatorTest {
 
     @Test
-    public void test() {
-        String[] array = {
-                "A145985716",
-                "A115079385",
-                "A162226449",
-                "A104372035",
-                "A184820316",
-                "A190951920",
-                "A185752862",
-                "A182464874",
-                "A173792418",
-                "A175094835",
-                "A107524326",
-                "A116873430",
-                "A158708250",
-                "A112264855",
-                "A146759103",
-                "A105774337",
-                "A144114286",
-                "A134796543",
-                "A125483275",
-                "A123382980",
-                "A120331329",
-                "A193901897",
-                "A137116878",
-                "A160919450",
-                "A148558766",
-                "A141159881",
-                "A107327916",
-                "A144884292",
-                "A110303144",
-                "A155749633",
-                "A104921430",
-                "A188624945",
-                "A122375132",
-                "A151580889",
-                "A151339597",
-                "A145156582",
-                "A142304737",
-                "A137203661",
-                "A162620876",
-                "A174076904",
-                "A173937373",
-                "A106573807",
-                "A152816548",
-                "A165455853",
-                "A123020289",
-                "A157519464",
-                "A129232229",
-                "A115594761",
-                "A130547893",
-                "A187895164",
-                "A199129068",
-                "A132774094",
-                "A193234079",
-                "A157588094",
-                "A104363125",
-                "A180440518",
-                "A171051754",
-                "A149897897",
-                "A117573331",
-                "A121613160",
-                "A197313222",
-                "A171301295",
-                "A139326381",
-                "A142346637",
-                "A164767390",
-                "A165455317",
-                "A114340643",
-                "A116098688",
-                "A145383730",
-                "A150207470",
-                "A118410253",
-                "A175665245",
-                "A195637578",
-                "A193310341",
-                "A180241042",
-                "A161540244",
-                "A177125575"
-        };
+    public void givenCorrectIdentityNumber_whenValidating_thenReturnsTrue() {
+        assert TaiwanIdentityValidator.valid("A123456789");
+    }
 
-        for (String idNumber : array) {
-            boolean result = TaiwanIdentityValidator.valid(idNumber);
-            assert result;
-        }
+    @Test
+    public void givenLowerCaseIdentityNumber_whenValidating_thenReturnsFalse() {
+        Assertions.assertFalse(TaiwanIdentityValidator.valid("a123456789"));;
+    }
+    @Test
+    public void givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse() {
+        Assertions.assertFalse(TaiwanIdentityValidator.valid("@123456789"));;
+    }
 
-
+    @Test
+    public void givenWrongIdentityNumber_whenValidating_thenReturnsFalse() {
+        Assertions.assertFalse(TaiwanIdentityValidator.valid("A000000000"));;
     }
 
 
