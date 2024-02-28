@@ -3,8 +3,7 @@ package com.eastrabbit.identity_number.validator;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
-public class FirstLetterValueUtil {
+ class FirstLetterValueUtil {
 
     public static final Map<String, Integer> FIRST_LETTER_VALUE_MAP;
 
