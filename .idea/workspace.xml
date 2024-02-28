@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="1st commit">
+    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="修正測試及驗證方式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/TaiwanIdentityNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/TaiwanIdentityNumberException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/FirstLetterValueUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/FirstLetterValueUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/IdentityNumberRegexCheckUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/IdentityNumberRegexCheckUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/TaiwanIdentityValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/TaiwanIdentityValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/TaiwanIdentityValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/TaiwanIdentityValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +223,7 @@
       <workItem from="1709113818821" duration="5072000" />
       <workItem from="1709118919135" duration="12667000" />
       <workItem from="1709133354170" duration="150000" />
-      <workItem from="1709133843131" duration="514000" />
+      <workItem from="1709133843131" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
@@ -238,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709128361736</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修正測試及驗證方式">
+      <option name="closed" value="true" />
+      <created>1709134436206</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709134436206</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +249,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
+    <MESSAGE value="修正測試及驗證方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正測試及驗證方式" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

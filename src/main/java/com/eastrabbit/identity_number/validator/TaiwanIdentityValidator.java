@@ -11,13 +11,8 @@ public class TaiwanIdentityValidator {
         char[] identityNumberChars = taiwanIdentityNumber.toCharArray();
         //取得身份證字號最後一位數
         int lastIdentityNumber = Character.getNumericValue(identityNumberChars[9]);
-        int checkNumber;
         //計算出檢查碼
-        try {
-            checkNumber = getCheckNumber(identityNumberChars);
-        } catch (Exception e) {
-            return false;
-        }
+        int checkNumber = getCheckNumber(identityNumberChars);
         //檢查碼應該和身分證最後一碼相同
         return checkNumber == lastIdentityNumber;
     }
