@@ -11,6 +11,7 @@ public class IdentityCardNumberValidator {
         validWithIdentityCard(identityCard);
     }
 
+    //TODO 外部使用者不應該依賴IdentityCard這個類別，所以這個類別應該要拿掉。
     public static void validWithIdentityCard(final IdentityCard identityCard) throws IdentityCardNumberFormatException {
         final String identityNumber = identityCard.getIdentityCardNumber();
         //將身份證字號轉為char[]
