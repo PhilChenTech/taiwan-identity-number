@@ -1,4 +1,4 @@
-package com.eastrabbit.identitynumber.exception;
+package com.eastrabbit.nationalidentitynumber.exception;
 
 public class InvalidIdentityCardNumberException extends Throwable {
 

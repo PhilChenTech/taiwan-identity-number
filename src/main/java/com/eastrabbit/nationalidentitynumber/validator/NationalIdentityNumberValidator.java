@@ -1,13 +1,13 @@
-package com.eastrabbit.identitynumber.validator;
+package com.eastrabbit.nationalidentitynumber.validator;
 
-import com.eastrabbit.identitynumber.exception.InvalidIdentityCardNumberException;
+import com.eastrabbit.nationalidentitynumber.exception.InvalidIdentityCardNumberException;
 
-public class IdentityCardNumberValidator {
+public class NationalIdentityNumberValidator {
 
     private static final Integer LAST_ID_INDEX = 9;
 
     public static void valid(final String identityCardNumber) throws InvalidIdentityCardNumberException {
-        boolean result = IdentityCardNumberRegexCheckUtil.validFormat(identityCardNumber);
+        boolean result = NationalIdentityNumberRegexCheckUtil.validFormat(identityCardNumber);
         if (!result) {
             throw new InvalidIdentityCardNumberException("Wrong format");
         }
@@ -27,7 +27,7 @@ public class IdentityCardNumberValidator {
         // 取得身份證字號第一個字母
         final String firstLetter = String.valueOf(identityNumberChars[0]);
         // 取得第一個字母對應的數字
-        int sum = IdentityCardNumberFirstLetterValueMapper.getFirstLetterValue(firstLetter);
+        int sum = NationalIdentityNumberFirstLetterValueMapper.getFirstLetterValue(firstLetter);
         // 開始計算並加總
         sum += Character.getNumericValue(identityNumberChars[1]) * 8;
         sum += Character.getNumericValue(identityNumberChars[2]) * 7;
