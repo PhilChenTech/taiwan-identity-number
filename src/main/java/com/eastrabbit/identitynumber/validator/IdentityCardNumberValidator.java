@@ -6,7 +6,12 @@ public class IdentityCardNumberValidator {
 
     private static final Integer LAST_ID_INDEX = 9;
 
-    public static void valid(final IdentityCard identityCard) throws IdentityCardNumberFormatException {
+    public static void valid(final String identityCardNumber) throws IdentityCardNumberFormatException {
+        IdentityCard identityCard = IdentityCard.create(identityCardNumber);
+        validWithIdentityCard(identityCard);
+    }
+
+    public static void validWithIdentityCard(final IdentityCard identityCard) throws IdentityCardNumberFormatException {
         final String identityNumber = identityCard.getIdentityCardNumber();
         //將身份證字號轉為char[]
         final char[] identityNumberChars = identityNumber.toCharArray();

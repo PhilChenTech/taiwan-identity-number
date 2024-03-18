@@ -14,7 +14,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void givenCorrectIdentityNumber_whenValidating_thenReturnsTrue() {
         try {
-            IdentityCardNumberValidator.valid(IdentityCard.create("A123456789"));
+            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("A123456789"));
         } catch (IdentityCardNumberFormatException e) {
             Assertions.fail();
         }
@@ -23,7 +23,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void givenLowerCaseIdentityNumber_whenValidating_thenReturnsFalse() {
         IdentityCardNumberFormatException exception = assertThrows(IdentityCardNumberFormatException.class, () -> {
-            IdentityCardNumberValidator.valid(IdentityCard.create("a123456789"));
+            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("a123456789"));
         });
         String expectedMessage = "Wrong format";
         String actualMessage = exception.getMessage();
@@ -35,7 +35,7 @@ class IdentityCardNumberValidatorTest {
     public void givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse() {
 
         IdentityCardNumberFormatException exception = assertThrows(IdentityCardNumberFormatException.class, () -> {
-            IdentityCardNumberValidator.valid(IdentityCard.create("@123456789"));
+            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("@123456789"));
         });
         String expectedMessage = "Wrong format";
         String actualMessage = exception.getMessage();
@@ -46,7 +46,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void givenWrongIdentityNumber_whenValidating_thenReturnsFalse() {
         IdentityCardNumberFormatException exception = assertThrows(IdentityCardNumberFormatException.class, () -> {
-            IdentityCardNumberValidator.valid(IdentityCard.create("A000000000"));
+            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("A000000000"));
         });
         String expectedMessage = "Wrong format";
         String actualMessage = exception.getMessage();
