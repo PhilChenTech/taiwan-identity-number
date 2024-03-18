@@ -1,10 +1,10 @@
 package com.eastrabbit.identitynumber.exception;
 
-public class IdentityCardNumberException extends Throwable {
+public class InvalidIdentityCardNumberException extends Throwable {
 
     private final String message;
 
-    public IdentityCardNumberException(String message) {
+    public InvalidIdentityCardNumberException(String message) {
         this.message = message;
     }
 

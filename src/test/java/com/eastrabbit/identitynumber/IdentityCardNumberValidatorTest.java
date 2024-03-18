@@ -1,6 +1,6 @@
 package com.eastrabbit.identitynumber;
 
-import com.eastrabbit.identitynumber.exception.IdentityCardNumberException;
+import com.eastrabbit.identitynumber.exception.InvalidIdentityCardNumberException;
 import com.eastrabbit.identitynumber.validator.IdentityCardNumberValidator;
 import org.junit.jupiter.api.Test;
 
@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class IdentityCardNumberValidatorTest {
 
     @Test
-    public void test1() throws IdentityCardNumberException {
+    public void test1() throws InvalidIdentityCardNumberException {
         IdentityCardNumberValidator.valid("A123456789");
     }
 
     @Test
     public void test2() {
-        IdentityCardNumberException exception = assertThrows(IdentityCardNumberException.class, () -> {
+        InvalidIdentityCardNumberException exception = assertThrows(InvalidIdentityCardNumberException.class, () -> {
             IdentityCardNumberValidator.valid("a123456789");
         });
         String expectedMessage = "Wrong format";
@@ -28,7 +28,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void test3() {
 
-        IdentityCardNumberException exception = assertThrows(IdentityCardNumberException.class, () -> {
+        InvalidIdentityCardNumberException exception = assertThrows(InvalidIdentityCardNumberException.class, () -> {
             IdentityCardNumberValidator.valid("@123456789");
         });
         String expectedMessage = "Wrong format";
@@ -39,7 +39,7 @@ class IdentityCardNumberValidatorTest {
 
     @Test
     public void test4() {
-        IdentityCardNumberException exception = assertThrows(IdentityCardNumberException.class, () -> {
+        InvalidIdentityCardNumberException exception = assertThrows(InvalidIdentityCardNumberException.class, () -> {
             IdentityCardNumberValidator.valid("A000000000");
         });
         String expectedMessage = "Wrong format";
@@ -50,7 +50,7 @@ class IdentityCardNumberValidatorTest {
 
     @Test
     public void test5() {
-        IdentityCardNumberException exception = assertThrows(IdentityCardNumberException.class, () -> {
+        InvalidIdentityCardNumberException exception = assertThrows(InvalidIdentityCardNumberException.class, () -> {
             IdentityCardNumberValidator.valid("A123456788");
         });
         String expectedMessage = "Invalid identity card number.";

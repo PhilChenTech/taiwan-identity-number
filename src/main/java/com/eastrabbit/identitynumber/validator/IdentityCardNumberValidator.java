@@ -1,15 +1,15 @@
 package com.eastrabbit.identitynumber.validator;
 
-import com.eastrabbit.identitynumber.exception.IdentityCardNumberException;
+import com.eastrabbit.identitynumber.exception.InvalidIdentityCardNumberException;
 
 public class IdentityCardNumberValidator {
 
     private static final Integer LAST_ID_INDEX = 9;
 
-    public static void valid(final String identityCardNumber) throws IdentityCardNumberException {
+    public static void valid(final String identityCardNumber) throws InvalidIdentityCardNumberException {
         boolean result = IdentityCardNumberRegexCheckUtil.validFormat(identityCardNumber);
         if (!result) {
-            throw new IdentityCardNumberException("Wrong format");
+            throw new InvalidIdentityCardNumberException("Wrong format");
         }
         //將身份證字號轉為char[]
         final char[] identityNumberChars = identityCardNumber.toCharArray();
@@ -19,7 +19,7 @@ public class IdentityCardNumberValidator {
         final int checkNumber = getCheckNumber(identityNumberChars);
         //檢查碼應該和身分證最後一碼相同
         if (!(checkNumber == lastIdentityNumber)) {
-            throw new IdentityCardNumberException("Invalid identity card number.");
+            throw new InvalidIdentityCardNumberException("Invalid identity card number.");
         }
     }
 
