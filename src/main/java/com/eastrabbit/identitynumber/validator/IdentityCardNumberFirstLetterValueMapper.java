@@ -1,9 +1,9 @@
-package com.eastrabbit.identity_number.validator;
+package com.eastrabbit.identitynumber.validator;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
- class FirstLetterValueUtil {
+ class IdentityCardNumberFirstLetterValueMapper {
 
     public static final Map<String, Integer> FIRST_LETTER_VALUE_MAP;
 

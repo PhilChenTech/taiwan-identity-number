@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="修正測試及驗證方式">
+    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="將類別改為default">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/TaiwanIdentityValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/TaiwanIdentityValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/FirstLetterValueUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberFirstLetterValueMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/IdentityNumberRegexCheckUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberRegexCheckUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/TaiwanIdentityValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/TaiwanIdentityValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/identitynumber/IdentityCardNumberValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,37 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="taiwan-identity-number" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="taiwan-identity-number" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="taiwan-identity-number" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,11 +83,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.IdValidatorTest.test.executor": "Run",
+    "Gradle.IdentityCardNumberValidatorTest.executor": "Run",
+    "Gradle.IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
+    "Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
+    "Gradle.TaiwanIdentityValidatorTest (1).executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.executor": "Run",
+    "Gradle.TaiwanIdentityValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.test.executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.test2.executor": "Run",
     "Gradle.taiwan-identity-number [:IdValidator.main()].executor": "Run",
     "Gradle.taiwan-identity-number [:IdentityNumberValidator.main()].executor": "Run",
+    "Gradle.taiwan-identity-number [clean].executor": "Run",
+    "Gradle.taiwan-identity-number [jar].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -58,13 +102,14 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/wxv19/IdeaProjects/spring-boot",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/wxv19/IdeaProjects/taiwan-identity-number/src/main/java/com/eastrabbit/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "File.Encoding",
@@ -73,6 +118,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.eastrabbit.identitynumber" />
       <recent name="com.eastrabbit" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -85,21 +131,8 @@
       <recent name="com.eastrabbit.identity_number.validator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TaiwanIdentityValidatorTest">
-    <configuration name="TaiwanIdentityValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.eastrabbit.validator.TaiwanIdentityValidator" />
-      <module name="taiwan-identity-number.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.eastrabbit.validator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IdValidatorTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.IdentityCardNumberValidatorTest">
+    <configuration name="IdentityCardNumberValidatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -112,7 +145,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.eastrabbit.IdValidatorTest.test&quot;" />
+            <option value="&quot;com.eastrabbit.identitynumber.IdentityCardNumberValidatorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -123,7 +156,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaiwanIdentityValidatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.eastrabbit.TaiwanIdentityValidatorTest&quot;" />
+            <option value="&quot;com.eastrabbit.identitynumber.IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +180,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaiwanIdentityValidatorTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +193,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.eastrabbit.TaiwanIdentityValidatorTest.test&quot;" />
+            <option value="&quot;com.eastrabbit.identitynumber.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,7 +204,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaiwanIdentityValidatorTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TaiwanIdentityValidatorTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,7 +217,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.eastrabbit.TaiwanIdentityValidatorTest.test2&quot;" />
+            <option value="&quot;com.eastrabbit.identitynumber.TaiwanIdentityValidatorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,15 +226,37 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="taiwan-identity-number [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TaiwanIdentityValidatorTest" />
-        <item itemvalue="Gradle.TaiwanIdentityValidatorTest.test" />
-        <item itemvalue="Gradle.TaiwanIdentityValidatorTest.test2" />
-        <item itemvalue="Gradle.IdValidatorTest.test" />
-        <item itemvalue="Application.TaiwanIdentityValidator" />
+        <item itemvalue="Gradle.IdentityCardNumberValidatorTest" />
+        <item itemvalue="Gradle.IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse" />
+        <item itemvalue="Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse" />
+        <item itemvalue="Gradle.TaiwanIdentityValidatorTest (1)" />
+        <item itemvalue="Gradle.taiwan-identity-number [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +278,15 @@
       <workItem from="1709113818821" duration="5072000" />
       <workItem from="1709118919135" duration="12667000" />
       <workItem from="1709133354170" duration="150000" />
-      <workItem from="1709133843131" duration="698000" />
+      <workItem from="1709133843131" duration="1127000" />
+      <workItem from="1709352816423" duration="92000" />
+      <workItem from="1709352918752" duration="596000" />
+      <workItem from="1709367279228" duration="43000" />
+      <workItem from="1709367334296" duration="23000" />
+      <workItem from="1709915209768" duration="337000" />
+      <workItem from="1709921415099" duration="581000" />
+      <workItem from="1710609131343" duration="37000" />
+      <workItem from="1710741163205" duration="2562000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
@@ -241,16 +304,45 @@
       <option name="project" value="LOCAL" />
       <updated>1709134436206</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="移除exception">
+      <option name="closed" value="true" />
+      <created>1709134614985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709134614985</updated>
+    </task>
+    <task id="LOCAL-00004" summary="將類別改為default">
+      <option name="closed" value="true" />
+      <created>1709134687517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709134687517</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
     <MESSAGE value="修正測試及驗證方式" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正測試及驗證方式" />
+    <MESSAGE value="移除exception" />
+    <MESSAGE value="將類別改為default" />
+    <option name="LAST_COMMIT_MESSAGE" value="將類別改為default" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

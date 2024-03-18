@@ -1,27 +1,30 @@
-package com.eastrabbit.identity_number.validator;
+package com.eastrabbit.identitynumber.validator;
 
-public class TaiwanIdentityValidator {
+import com.eastrabbit.identitynumber.exception.IdentityCardNumberFormatException;
 
-    public static boolean valid(final String taiwanIdentityNumber) {
-        //確認格式正確
-        if (!IdentityNumberRegexCheckUtil.isLegal(taiwanIdentityNumber)) {
-            return false;
-        }
+public class IdentityCardNumberValidator {
+
+    private static final Integer LAST_ID_INDEX = 9;
+
+    public static void valid(final IdentityCard identityCard) throws IdentityCardNumberFormatException {
+        final String identityNumber = identityCard.getIdentityCardNumber();
         //將身份證字號轉為char[]
-        char[] identityNumberChars = taiwanIdentityNumber.toCharArray();
+        final char[] identityNumberChars = identityNumber.toCharArray();
         //取得身份證字號最後一位數
-        int lastIdentityNumber = Character.getNumericValue(identityNumberChars[9]);
+        final int lastIdentityNumber = Character.getNumericValue(identityNumberChars[LAST_ID_INDEX]);
         //計算出檢查碼
-        int checkNumber = getCheckNumber(identityNumberChars);
+        final int checkNumber = getCheckNumber(identityNumberChars);
         //檢查碼應該和身分證最後一碼相同
-        return checkNumber == lastIdentityNumber;
+        if (!(checkNumber == lastIdentityNumber)) {
+            throw new IdentityCardNumberFormatException();
+        }
     }
 
     private static int getCheckNumber(char[] identityNumberChars) {
         // 取得身份證字號第一個字母
         final String firstLetter = String.valueOf(identityNumberChars[0]);
         // 取得第一個字母對應的數字
-        int sum = FirstLetterValueUtil.getFirstLetterValue(firstLetter);
+        int sum = IdentityCardNumberFirstLetterValueMapper.getFirstLetterValue(firstLetter);
         // 開始計算並加總
         sum += Character.getNumericValue(identityNumberChars[1]) * 8;
         sum += Character.getNumericValue(identityNumberChars[2]) * 7;
