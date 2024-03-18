@@ -1,7 +1,6 @@
 package com.eastrabbit.identitynumber;
 
 import com.eastrabbit.identitynumber.exception.IdentityCardNumberFormatException;
-import com.eastrabbit.identitynumber.validator.IdentityCard;
 import com.eastrabbit.identitynumber.validator.IdentityCardNumberValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -14,7 +13,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void givenCorrectIdentityNumber_whenValidating_thenReturnsTrue() {
         try {
-            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("A123456789"));
+            IdentityCardNumberValidator.valid("A123456789");
         } catch (IdentityCardNumberFormatException e) {
             Assertions.fail();
         }
@@ -23,7 +22,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void givenLowerCaseIdentityNumber_whenValidating_thenReturnsFalse() {
         IdentityCardNumberFormatException exception = assertThrows(IdentityCardNumberFormatException.class, () -> {
-            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("a123456789"));
+            IdentityCardNumberValidator.valid("a123456789");
         });
         String expectedMessage = "Wrong format";
         String actualMessage = exception.getMessage();
@@ -35,7 +34,7 @@ class IdentityCardNumberValidatorTest {
     public void givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse() {
 
         IdentityCardNumberFormatException exception = assertThrows(IdentityCardNumberFormatException.class, () -> {
-            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("@123456789"));
+            IdentityCardNumberValidator.valid("@123456789");
         });
         String expectedMessage = "Wrong format";
         String actualMessage = exception.getMessage();
@@ -46,7 +45,7 @@ class IdentityCardNumberValidatorTest {
     @Test
     public void givenWrongIdentityNumber_whenValidating_thenReturnsFalse() {
         IdentityCardNumberFormatException exception = assertThrows(IdentityCardNumberFormatException.class, () -> {
-            IdentityCardNumberValidator.validWithIdentityCard(IdentityCard.create("A000000000"));
+            IdentityCardNumberValidator.valid("A000000000");
         });
         String expectedMessage = "Wrong format";
         String actualMessage = exception.getMessage();

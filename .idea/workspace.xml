@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="修正exception">
+    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="加上註解未來待修正">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/identitynumber/IdentityCardNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/identitynumber/IdentityCardNumberValidatorTest.java" afterDir="false" />
     </list>
@@ -280,7 +281,7 @@
       <workItem from="1709915209768" duration="337000" />
       <workItem from="1709921415099" duration="581000" />
       <workItem from="1710609131343" duration="37000" />
-      <workItem from="1710741163205" duration="2855000" />
+      <workItem from="1710741163205" duration="3351000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
@@ -330,7 +331,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710743892716</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="增加純使用字串驗證的方式">
+      <option name="closed" value="true" />
+      <created>1710744050064</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710744050064</updated>
+    </task>
+    <task id="LOCAL-00008" summary="加上註解未來待修正">
+      <option name="closed" value="true" />
+      <created>1710744132162</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710744132162</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +371,9 @@
     <MESSAGE value="將類別改為default" />
     <MESSAGE value="改為不回傳值使用exception" />
     <MESSAGE value="修正exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正exception" />
+    <MESSAGE value="增加純使用字串驗證的方式" />
+    <MESSAGE value="加上註解未來待修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="加上註解未來待修正" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

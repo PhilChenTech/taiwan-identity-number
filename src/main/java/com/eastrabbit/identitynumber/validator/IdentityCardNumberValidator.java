@@ -6,16 +6,14 @@ public class IdentityCardNumberValidator {
 
     private static final Integer LAST_ID_INDEX = 9;
 
-    public static void valid(final String identityCardNumber) throws IdentityCardNumberFormatException {
-        IdentityCard identityCard = IdentityCard.create(identityCardNumber);
-        validWithIdentityCard(identityCard);
-    }
-
     //TODO 外部使用者不應該依賴IdentityCard這個類別，所以這個類別應該要拿掉。
-    public static void validWithIdentityCard(final IdentityCard identityCard) throws IdentityCardNumberFormatException {
-        final String identityNumber = identityCard.getIdentityCardNumber();
+    public static void valid(final String identityCardNumber) throws IdentityCardNumberFormatException {
+        boolean result = IdentityCardNumberRegexCheckUtil.validFormat(identityCardNumber);
+        if (!result) {
+            throw new IdentityCardNumberFormatException();
+        }
         //將身份證字號轉為char[]
-        final char[] identityNumberChars = identityNumber.toCharArray();
+        final char[] identityNumberChars = identityCardNumber.toCharArray();
         //取得身份證字號最後一位數
         final int lastIdentityNumber = Character.getNumericValue(identityNumberChars[LAST_ID_INDEX]);
         //計算出檢查碼
