@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="移除不必要的class">
+    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="修正testCase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/InvalidIdentityCardNumberException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberFormatException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/identitynumber/IdentityCardNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/identitynumber/IdentityCardNumberValidatorTest.java" afterDir="false" />
     </list>
@@ -81,6 +83,7 @@
     "Gradle.IdentityCardNumberValidatorTest.executor": "Run",
     "Gradle.IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
     "Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
+    "Gradle.IdentityCardNumberValidatorTest.test5.executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest (1).executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
@@ -126,7 +129,7 @@
       <recent name="com.eastrabbit.identity_number.validator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse">
+  <component name="RunManager" selected="Gradle.IdentityCardNumberValidatorTest">
     <configuration name="IdentityCardNumberValidatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,6 +202,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="IdentityCardNumberValidatorTest.test5" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.eastrabbit.identitynumber.IdentityCardNumberValidatorTest.test5&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TaiwanIdentityValidatorTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -223,35 +250,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="taiwan-identity-number [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse" />
         <item itemvalue="Gradle.IdentityCardNumberValidatorTest" />
+        <item itemvalue="Gradle.IdentityCardNumberValidatorTest.test5" />
+        <item itemvalue="Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse" />
         <item itemvalue="Gradle.IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse" />
         <item itemvalue="Gradle.TaiwanIdentityValidatorTest (1)" />
-        <item itemvalue="Gradle.taiwan-identity-number [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -281,7 +286,7 @@
       <workItem from="1709915209768" duration="337000" />
       <workItem from="1709921415099" duration="581000" />
       <workItem from="1710609131343" duration="37000" />
-      <workItem from="1710741163205" duration="3580000" />
+      <workItem from="1710741163205" duration="3856000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
@@ -355,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710744570689</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修正testCase">
+      <option name="closed" value="true" />
+      <created>1710744762638</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710744762638</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +395,8 @@
     <MESSAGE value="增加純使用字串驗證的方式" />
     <MESSAGE value="加上註解未來待修正" />
     <MESSAGE value="移除不必要的class" />
-    <option name="LAST_COMMIT_MESSAGE" value="移除不必要的class" />
+    <MESSAGE value="修正testCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正testCase" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
