@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="將類別改為default">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCard.java" afterDir="false" />
+    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="改為不回傳值使用exception">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/FirstLetterValueUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberFirstLetterValueMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/IdentityNumberRegexCheckUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberRegexCheckUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identity_number/validator/TaiwanIdentityValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/TaiwanIdentityValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/identitynumber/IdentityCardNumberValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/exception/IdentityCardNumberFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberRegexCheckUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/identitynumber/validator/IdentityCardNumberRegexCheckUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +282,7 @@
       <workItem from="1709915209768" duration="337000" />
       <workItem from="1709921415099" duration="581000" />
       <workItem from="1710609131343" duration="37000" />
-      <workItem from="1710741163205" duration="2562000" />
+      <workItem from="1710741163205" duration="2706000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
@@ -320,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709134687517</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="改為不回傳值使用exception">
+      <option name="closed" value="true" />
+      <created>1710743764042</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710743764042</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +346,8 @@
     <MESSAGE value="修正測試及驗證方式" />
     <MESSAGE value="移除exception" />
     <MESSAGE value="將類別改為default" />
-    <option name="LAST_COMMIT_MESSAGE" value="將類別改為default" />
+    <MESSAGE value="改為不回傳值使用exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="改為不回傳值使用exception" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

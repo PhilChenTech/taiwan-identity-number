@@ -1,9 +1,8 @@
 package com.eastrabbit.identitynumber.exception;
 
-public class IdentityCardNumberException extends Throwable{
-    private final String MESSAGE = "Invalid identity card number.";
+public class IdentityCardNumberException extends Throwable {
     @Override
     public String getMessage() {
-        return MESSAGE;
+        return "Invalid identity card number.";
     }
 }
