@@ -1,13 +1,13 @@
 package com.eastrabbit.identitynumber.validator;
 
+import com.eastrabbit.identitynumber.exception.IdentityCardNumberException;
 import com.eastrabbit.identitynumber.exception.IdentityCardNumberFormatException;
 
 public class IdentityCardNumberValidator {
 
     private static final Integer LAST_ID_INDEX = 9;
 
-    //TODO 外部使用者不應該依賴IdentityCard這個類別，所以這個類別應該要拿掉。
-    public static void valid(final String identityCardNumber) throws IdentityCardNumberFormatException {
+    public static void valid(final String identityCardNumber) throws IdentityCardNumberFormatException, IdentityCardNumberException {
         boolean result = IdentityCardNumberRegexCheckUtil.validFormat(identityCardNumber);
         if (!result) {
             throw new IdentityCardNumberFormatException();
@@ -20,7 +20,7 @@ public class IdentityCardNumberValidator {
         final int checkNumber = getCheckNumber(identityNumberChars);
         //檢查碼應該和身分證最後一碼相同
         if (!(checkNumber == lastIdentityNumber)) {
-            throw new IdentityCardNumberFormatException();
+            throw new IdentityCardNumberException();
         }
     }
 

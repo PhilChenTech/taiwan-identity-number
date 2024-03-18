@@ -1,5 +1,6 @@
 package com.eastrabbit.identitynumber;
 
+import com.eastrabbit.identitynumber.exception.IdentityCardNumberException;
 import com.eastrabbit.identitynumber.exception.IdentityCardNumberFormatException;
 import com.eastrabbit.identitynumber.validator.IdentityCardNumberValidator;
 import org.junit.jupiter.api.Assertions;
@@ -11,12 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class IdentityCardNumberValidatorTest {
 
     @Test
-    public void givenCorrectIdentityNumber_whenValidating_thenReturnsTrue() {
-        try {
-            IdentityCardNumberValidator.valid("A123456789");
-        } catch (IdentityCardNumberFormatException e) {
-            Assertions.fail();
-        }
+    public void givenCorrectIdentityNumber_whenValidating_thenReturnsTrue() throws IdentityCardNumberException, IdentityCardNumberFormatException {
+        IdentityCardNumberValidator.valid("A123456789");
     }
 
     @Test
