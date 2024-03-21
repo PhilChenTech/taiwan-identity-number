@@ -1,15 +1,17 @@
-package com.eastrabbit.nationalidentitynumber;
+package com.eastrabbit.taiwannationalidentitynumber;
 
-import com.eastrabbit.nationalidentitynumber.exception.InvalidNationalIdentityNumberException;
-import com.eastrabbit.nationalidentitynumber.validator.NationalIdentityNumberValidator;
+import com.eastrabbit.taiwannationalidentitynumber.exception.InvalidNationalIdentityNumberException;
+import com.eastrabbit.taiwannationalidentitynumber.validator.ErrorMessage;
+import com.eastrabbit.taiwannationalidentitynumber.validator.NationalIdentityNumberValidator;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class NationalIdentityNumberValidatorTest {
 
     @Test
+    @DisplayName("ssss")
     public void test1() throws InvalidNationalIdentityNumberException {
         NationalIdentityNumberValidator.valid("A123456789");
     }
@@ -19,9 +21,9 @@ class NationalIdentityNumberValidatorTest {
         InvalidNationalIdentityNumberException exception = assertThrows(InvalidNationalIdentityNumberException.class, () -> {
             NationalIdentityNumberValidator.valid("a123456789");
         });
-        String expectedMessage = "WRONG_FORMAT";
+        String expectedMessage = ErrorMessage.WRONG_FORMAT.name();
         String actualMessage = exception.getMessage();
-        assertTrue(actualMessage.contains(expectedMessage));
+        assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -30,10 +32,9 @@ class NationalIdentityNumberValidatorTest {
         InvalidNationalIdentityNumberException exception = assertThrows(InvalidNationalIdentityNumberException.class, () -> {
             NationalIdentityNumberValidator.valid("@123456789");
         });
-        String expectedMessage = "WRONG_FORMAT";
+        String expectedMessage = ErrorMessage.WRONG_FORMAT.name();
         String actualMessage = exception.getMessage();
-
-        assertTrue(actualMessage.contains(expectedMessage));
+        assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -41,10 +42,9 @@ class NationalIdentityNumberValidatorTest {
         InvalidNationalIdentityNumberException exception = assertThrows(InvalidNationalIdentityNumberException.class, () -> {
             NationalIdentityNumberValidator.valid("A000000000");
         });
-        String expectedMessage = "WRONG_FORMAT";
+        String expectedMessage = ErrorMessage.WRONG_FORMAT.name();
         String actualMessage = exception.getMessage();
-
-        assertTrue(actualMessage.contains(expectedMessage));
+        assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -52,10 +52,9 @@ class NationalIdentityNumberValidatorTest {
         InvalidNationalIdentityNumberException exception = assertThrows(InvalidNationalIdentityNumberException.class, () -> {
             NationalIdentityNumberValidator.valid("A123456788");
         });
-        String expectedMessage = "INVALID_NATIONAL_IDENTITY_NUMBER";
+        String expectedMessage = ErrorMessage.INVALID_NATIONAL_IDENTITY_NUMBER.name();
         String actualMessage = exception.getMessage();
-
-        assertTrue(actualMessage.contains(expectedMessage));
+        assertEquals(expectedMessage, actualMessage);
     }
 
 

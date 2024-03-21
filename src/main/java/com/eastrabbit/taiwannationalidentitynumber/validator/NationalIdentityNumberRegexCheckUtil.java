@@ -1,4 +1,4 @@
-package com.eastrabbit.nationalidentitynumber.validator;
+package com.eastrabbit.taiwannationalidentitynumber.validator;
 
 import java.util.regex.Pattern;
 

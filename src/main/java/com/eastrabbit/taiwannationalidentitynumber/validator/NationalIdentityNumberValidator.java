@@ -1,6 +1,6 @@
-package com.eastrabbit.nationalidentitynumber.validator;
+package com.eastrabbit.taiwannationalidentitynumber.validator;
 
-import com.eastrabbit.nationalidentitynumber.exception.InvalidNationalIdentityNumberException;
+import com.eastrabbit.taiwannationalidentitynumber.exception.InvalidNationalIdentityNumberException;
 
 public class NationalIdentityNumberValidator {
     private static final Integer LAST_ID_INDEX = 9;

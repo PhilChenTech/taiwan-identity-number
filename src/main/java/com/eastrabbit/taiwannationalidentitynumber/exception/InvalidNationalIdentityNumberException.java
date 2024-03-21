@@ -1,6 +1,6 @@
-package com.eastrabbit.nationalidentitynumber.exception;
+package com.eastrabbit.taiwannationalidentitynumber.exception;
 
-import com.eastrabbit.nationalidentitynumber.validator.ErrorMessage;
+import com.eastrabbit.taiwannationalidentitynumber.validator.ErrorMessage;
 
 public class InvalidNationalIdentityNumberException extends Throwable {
 
