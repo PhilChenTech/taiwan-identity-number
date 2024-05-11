@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="修正class名稱ErrorMessage">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="優化計算邏輯">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberFirstLetterValueMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberRegexCheckUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/taiwannationalidentitynumber/NationalIdentityNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/taiwannationalidentitynumber/NationalIdentityNumberValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +293,7 @@
       <workItem from="1710741163205" duration="5509000" />
       <workItem from="1711043367701" duration="329000" />
       <workItem from="1715441841032" duration="1099000" />
-      <workItem from="1715442958477" duration="253000" />
+      <workItem from="1715442958477" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
@@ -412,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710746678157</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="優化計算邏輯">
+      <option name="closed" value="true" />
+      <created>1715443258431</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715443258431</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +446,8 @@
     <MESSAGE value="修改exception名稱" />
     <MESSAGE value="修正class名稱" />
     <MESSAGE value="修正class名稱ErrorMessage" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正class名稱ErrorMessage" />
+    <MESSAGE value="優化計算邏輯" />
+    <option name="LAST_COMMIT_MESSAGE" value="優化計算邏輯" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

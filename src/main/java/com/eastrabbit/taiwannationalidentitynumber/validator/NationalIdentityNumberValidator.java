@@ -12,7 +12,7 @@ public class NationalIdentityNumberValidator {
     private static final String REGEX = "[A-Z][12]\\d{8}";
     private static final Pattern PATTERN = Pattern.compile(REGEX);
     private static final int[] MULTIPLIERS = {8, 7, 6, 5, 4, 3, 2, 1};
-    public static final Map<String, Integer> FIRST_LETTER_VALUE_MAP;
+    private static final Map<String, Integer> FIRST_LETTER_VALUE_MAP;
 
     static {
         Map<String, Integer> map = new HashMap<>();
@@ -45,6 +45,12 @@ public class NationalIdentityNumberValidator {
         FIRST_LETTER_VALUE_MAP = Collections.unmodifiableMap(map);
     }
 
+    /**
+     * 驗證身分證字號
+     *
+     * @param identityCardNumber 身份證字號
+     * @throws InvalidNationalIdentityNumberException 身分證字號驗證失敗
+     */
     public static void valid(final String identityCardNumber) throws InvalidNationalIdentityNumberException {
         validFormat(identityCardNumber);
         final char[] identityNumberChars = identityCardNumber.toCharArray();
@@ -56,8 +62,7 @@ public class NationalIdentityNumberValidator {
     /**
      * 驗證格式
      *
-     * @param taiwanIdentityNumber
-     * @return
+     * @param taiwanIdentityNumber 身份證字號
      */
     static void validFormat(String taiwanIdentityNumber) throws InvalidNationalIdentityNumberException {
         if (!PATTERN.matcher(taiwanIdentityNumber).matches()) {
@@ -66,6 +71,11 @@ public class NationalIdentityNumberValidator {
     }
 
 
+    /**
+     * 計算checkSum
+     *
+     * @param identityNumberChars 身分證字號char[]
+     */
     private static int calculateCheckSum(char[] identityNumberChars) {
         // 取得身份證字號第一個字母
         final String firstLetter = String.valueOf(identityNumberChars[0]);
@@ -85,12 +95,12 @@ public class NationalIdentityNumberValidator {
     /**
      * 計算出來的數值是否與最後一位檢查碼相同
      *
-     * @param checkNumber
-     * @param lastIdentityNumber
-     * @throws InvalidNationalIdentityNumberException
+     * @param calculateCheckSum  計算出的checkSum
+     * @param lastIdentityNumber 身分證字號最後一碼
+     * @throws InvalidNationalIdentityNumberException 身分證字號驗證失敗
      */
-    private static void validCheckNumber(int checkNumber, int lastIdentityNumber) throws InvalidNationalIdentityNumberException {
-        if (!(checkNumber == lastIdentityNumber)) {
+    private static void validCheckNumber(int calculateCheckSum, int lastIdentityNumber) throws InvalidNationalIdentityNumberException {
+        if (!(calculateCheckSum == lastIdentityNumber)) {
             throw new InvalidNationalIdentityNumberException(ErrorMessage.INVALID_NATIONAL_IDENTITY_NUMBER);
         }
     }
