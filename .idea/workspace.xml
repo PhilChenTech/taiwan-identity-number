@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="392fd525-344b-4055-b488-407f24e131d4" name="Changes" comment="修正class名稱ErrorMessage">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/nationalidentitynumber/NationalIdentityNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/nationalidentitynumber/NationalIdentityNumberValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberFirstLetterValueMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberRegexCheckUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eastrabbit/taiwannationalidentitynumber/validator/NationalIdentityNumberValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/eastrabbit/taiwannationalidentitynumber/NationalIdentityNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/eastrabbit/taiwannationalidentitynumber/NationalIdentityNumberValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="uwjo62yk" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -77,6 +85,7 @@
     "Gradle.IdentityCardNumberValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
     "Gradle.IdentityCardNumberValidatorTest.givenWrongIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
     "Gradle.IdentityCardNumberValidatorTest.test5.executor": "Run",
+    "Gradle.NationalIdentityNumberValidatorTest (1).executor": "Run",
     "Gradle.NationalIdentityNumberValidatorTest.executor": "Run",
     "Gradle.NationalIdentityNumberValidatorTest.test1.executor": "Run",
     "Gradle.NationalIdentityNumberValidatorTest.test2.executor": "Run",
@@ -86,6 +95,7 @@
     "Gradle.TaiwanIdentityValidatorTest.givenWrongFirstLetterIdentityNumber_whenValidating_thenReturnsFalse.executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.test.executor": "Run",
     "Gradle.TaiwanIdentityValidatorTest.test2.executor": "Run",
+    "Gradle.Tests in 'com.eastrabbit.taiwannationalidentitynumber'.executor": "Run",
     "Gradle.taiwan-identity-number [:IdValidator.main()].executor": "Run",
     "Gradle.taiwan-identity-number [:IdentityNumberValidator.main()].executor": "Run",
     "Gradle.taiwan-identity-number [clean].executor": "Run",
@@ -95,7 +105,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/wxv19/IdeaProjects/spring-boot",
@@ -127,8 +137,8 @@
       <recent name="com.eastrabbit.identity_number.validator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.NationalIdentityNumberValidatorTest">
-    <configuration name="IdentityCardNumberValidatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'com.eastrabbit.taiwannationalidentitynumber'">
+    <configuration name="NationalIdentityNumberValidatorTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -141,7 +151,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.eastrabbit.identitynumber.IdentityCardNumberValidatorTest&quot;" />
+            <option value="&quot;com.eastrabbit.taiwannationalidentitynumber.NationalIdentityNumberValidatorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -200,30 +210,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NationalIdentityNumberValidatorTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.eastrabbit.nationalidentitynumber.NationalIdentityNumberValidatorTest.test2&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="NationalIdentityNumberValidatorTest.test3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -248,20 +234,45 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'com.eastrabbit.taiwannationalidentitynumber'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.eastrabbit.taiwannationalidentitynumber.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'com.eastrabbit.taiwannationalidentitynumber'" />
+        <item itemvalue="Gradle.NationalIdentityNumberValidatorTest (1)" />
         <item itemvalue="Gradle.NationalIdentityNumberValidatorTest" />
         <item itemvalue="Gradle.NationalIdentityNumberValidatorTest.test1" />
         <item itemvalue="Gradle.NationalIdentityNumberValidatorTest.test3" />
-        <item itemvalue="Gradle.NationalIdentityNumberValidatorTest.test2" />
-        <item itemvalue="Gradle.IdentityCardNumberValidatorTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-f644763e9732-af3fa2b8" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -286,6 +297,8 @@
       <workItem from="1710609131343" duration="37000" />
       <workItem from="1710741163205" duration="5509000" />
       <workItem from="1711043367701" duration="329000" />
+      <workItem from="1715441841032" duration="1099000" />
+      <workItem from="1715442958477" duration="253000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />

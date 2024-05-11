@@ -2,49 +2,98 @@ package com.eastrabbit.taiwannationalidentitynumber.validator;
 
 import com.eastrabbit.taiwannationalidentitynumber.exception.InvalidNationalIdentityNumberException;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
+
 public class NationalIdentityNumberValidator {
     private static final Integer LAST_ID_INDEX = 9;
+    private static final String REGEX = "[A-Z][12]\\d{8}";
+    private static final Pattern PATTERN = Pattern.compile(REGEX);
+    private static final int[] MULTIPLIERS = {8, 7, 6, 5, 4, 3, 2, 1};
+    public static final Map<String, Integer> FIRST_LETTER_VALUE_MAP;
+
+    static {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("A", 1);
+        map.put("B", 0);
+        map.put("C", 9);
+        map.put("D", 8);
+        map.put("E", 7);
+        map.put("F", 6);
+        map.put("G", 5);
+        map.put("H", 4);
+        map.put("I", 9);
+        map.put("J", 3);
+        map.put("K", 2);
+        map.put("L", 2);
+        map.put("M", 1);
+        map.put("N", 0);
+        map.put("O", 8);
+        map.put("P", 9);
+        map.put("Q", 8);
+        map.put("R", 7);
+        map.put("S", 6);
+        map.put("T", 5);
+        map.put("U", 4);
+        map.put("V", 3);
+        map.put("W", 1);
+        map.put("X", 3);
+        map.put("Y", 2);
+        map.put("Z", 0);
+        FIRST_LETTER_VALUE_MAP = Collections.unmodifiableMap(map);
+    }
 
     public static void valid(final String identityCardNumber) throws InvalidNationalIdentityNumberException {
-        boolean result = NationalIdentityNumberRegexCheckUtil.validFormat(identityCardNumber);
-        if (!result) {
+        validFormat(identityCardNumber);
+        final char[] identityNumberChars = identityCardNumber.toCharArray();
+        final int checkSum = Character.getNumericValue(identityNumberChars[LAST_ID_INDEX]);
+        final int calculateCheckSum = calculateCheckSum(identityNumberChars);
+        validCheckNumber(calculateCheckSum, checkSum);
+    }
+
+    /**
+     * 驗證格式
+     *
+     * @param taiwanIdentityNumber
+     * @return
+     */
+    static void validFormat(String taiwanIdentityNumber) throws InvalidNationalIdentityNumberException {
+        if (!PATTERN.matcher(taiwanIdentityNumber).matches()) {
             throw new InvalidNationalIdentityNumberException(ErrorMessage.WRONG_FORMAT);
         }
-        //將身份證字號轉為char[]
-        final char[] identityNumberChars = identityCardNumber.toCharArray();
-        //取得身份證字號最後一位數
-        final int lastIdentityNumber = Character.getNumericValue(identityNumberChars[LAST_ID_INDEX]);
-        //計算出檢查碼
-        final int checkNumber = getCheckNumber(identityNumberChars);
-        //檢查碼應該和身分證最後一碼相同
+    }
+
+
+    private static int calculateCheckSum(char[] identityNumberChars) {
+        // 取得身份證字號第一個字母
+        final String firstLetter = String.valueOf(identityNumberChars[0]);
+        // 取得第一個字母對應的數字
+        int sum = FIRST_LETTER_VALUE_MAP.get(firstLetter);
+
+        // 開始計算並加總
+        for (int i = 1; i < 9; i++) {
+            sum += Character.getNumericValue(identityNumberChars[i]) * MULTIPLIERS[i - 1];
+        }
+
+        //除10取餘數
+        int sumMod10 = sum % 10;
+        return (sumMod10 == 0) ? 0 : (10 - sumMod10);
+    }
+
+    /**
+     * 計算出來的數值是否與最後一位檢查碼相同
+     *
+     * @param checkNumber
+     * @param lastIdentityNumber
+     * @throws InvalidNationalIdentityNumberException
+     */
+    private static void validCheckNumber(int checkNumber, int lastIdentityNumber) throws InvalidNationalIdentityNumberException {
         if (!(checkNumber == lastIdentityNumber)) {
             throw new InvalidNationalIdentityNumberException(ErrorMessage.INVALID_NATIONAL_IDENTITY_NUMBER);
         }
     }
 
-    private static int getCheckNumber(char[] identityNumberChars) {
-        // 取得身份證字號第一個字母
-        final String firstLetter = String.valueOf(identityNumberChars[0]);
-        // 取得第一個字母對應的數字
-        int sum = NationalIdentityNumberFirstLetterValueMapper.getFirstLetterValue(firstLetter);
-        // 開始計算並加總
-        sum += Character.getNumericValue(identityNumberChars[1]) * 8;
-        sum += Character.getNumericValue(identityNumberChars[2]) * 7;
-        sum += Character.getNumericValue(identityNumberChars[3]) * 6;
-        sum += Character.getNumericValue(identityNumberChars[4]) * 5;
-        sum += Character.getNumericValue(identityNumberChars[5]) * 4;
-        sum += Character.getNumericValue(identityNumberChars[6]) * 3;
-        sum += Character.getNumericValue(identityNumberChars[7]) * 2;
-        sum += Character.getNumericValue(identityNumberChars[8]);
-        //除10取餘數
-        int sumMod10 = sum % 10;
-        if (sumMod10 == 0) {
-            // 餘數是0時，檢查碼為0
-            return 0;
-        } else {
-            // 餘數不是0時，檢查碼 = 10 - 餘數
-            return (10 - sumMod10);
-        }
-    }
 
 }
